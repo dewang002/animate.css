@@ -253,16 +253,13 @@ blockquote {
   left: 100%;
   height: 100%;
   z-index: 90;
-
   grid-area: animation-list;
   grid-row: 1 / 3;
   overflow-y: auto;
   padding: 2rem;
-
   animation-delay: 0.7s;
   animation-fill-mode: backwards;
   transition: transform 0.2s ease-out;
-
   background-color: var(--c-background-dark);
 }
 
@@ -291,6 +288,7 @@ blockquote {
   cursor: pointer;
   display: flex;
   justify-content: space-between;
+  transition: 2s ease;
 }
 
 .animation-item--title {
@@ -336,7 +334,8 @@ blockquote {
   cursor: pointer;
   background: none;
   background: #f7d7b5;
-  visibility: hidden;
+  opacity: 0;
+  transition: 0.2s ease-in;
 }
 
 .copy-icon::before {
@@ -351,7 +350,7 @@ blockquote {
 }
 
 .animation-item:hover .copy-icon {
-  visibility: visible;
+  opacity: 1;
 }
 
 .animation-item .copy-icon:hover,
@@ -625,6 +624,7 @@ blockquote {
 
 .animation-list {
   text-align: left;
+  overflow-x: hidden;
 }
 
 /*-----------------------------------*\
